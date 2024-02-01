@@ -9,9 +9,12 @@ The project can be slit in several steps :
 
 ## Pose estimation
 
-A quick search on pose estimation models give us the following papers :
+A quick search on pose estimation models give us the following papers.
 MoveNet and PoseNet are implemented within the Tensorflow library [1].
-Paper with code gives us the following models to consider : ViTPose, PCT, OmniPose
+We will use those model for the first tests.
+
+I would then be interesting to look for better models.
+For example : MMPose, ViTPose, PCT, OmniPose, AlphaPose, YOLO-NAS, OpenPose [2], [3], [4]
 
 
 
