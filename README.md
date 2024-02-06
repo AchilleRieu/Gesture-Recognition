@@ -24,7 +24,7 @@ The project can be slit in several steps :
 
 1) Pose estimation
 2) Movement classification (Difficuly score)
-3) Scoring (Execution Score)
+3) Posture correction (Execution Score)
 
 ### Pose estimation
 
