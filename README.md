@@ -39,11 +39,21 @@ For example : MMPose, ViTPose, PCT, OmniPose, AlphaPose, YOLO-NAS, OpenPose [2],
 
 ### Movement classification 
 
-This step purpose is to classifiy the movement 
+This step purpose is to classifiy the movement to first assigned the corresponding difficuly score and then to get the corresponding angles for the posture correction.
 
+To do so we are going to train a classifier on top of the pose estimation model. 
+The model architecture will be based on the pose estimation tutorial from tensorflow [1].
+It will consist of 2 submodels:
+  1) Submodel 1 calculates a pose embedding (a.k.a feature vector) from the detected landmark coordinates.
+  2) Submodel 2 feeds pose embedding through several Dense layer to predict the pose class.
 
+### Posture correction
 
-References:
+For this step, we are going to use the work from the following paper: Real-Time Posture Correction in Gym Exercises: A Computer Vision-Based Approach for Performance Analysis, Error Classification and Feedback [5].
+
+In this paper, the authors present a angle based method for posture correction.
+
+## References:
 
 [1] https://www.tensorflow.org/lite/examples/pose_estimation/overview?hl=en
 
@@ -52,3 +62,5 @@ References:
 [3] https://www.reasonfieldlab.com/post/human-pose-estimation-2023-guide
 
 [4] https://pallawi-ds.medium.com/which-human-pose-estimation-model-should-you-pick-to-realise-your-ideas-for-a-video-analytics-6ca754cc1f4e
+
+[5] https://ceur-ws.org/Vol-3499/paper9.pdf
